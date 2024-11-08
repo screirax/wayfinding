@@ -27,7 +27,31 @@ require "settings/init.php";
 </div>
 <div class="container col-12 col-md-12 d-flex flex-column flex-md-row justify-content-between mt-1 bg-body-tertiary">
 
-    <p>dette er en test for at se om den kommer på github2</p>
+
+    <div class="col-12 col-md-4 mt-5">
+        <h3 class="text-left">Du kan nu vælge fra menuen en ting som du kan sætte ind i dit rum</h3>
+
+
+    </div>
+
+    <div class="mt-5 col-12 col-md-8">
+        <div class="mb-3" id="divtest" style="height: 100px; width: 100px; border: 2px solid black; background-color: #F0E5DD">
+            <p class="text-center mt-3">Din Væg</p>
+        </div>
+    </div>
+
+
+
+    <script>
+        const savedHeight = sessionStorage.getItem("height");
+        const savedWidth = sessionStorage.getItem("width");
+
+        document.getElementById("savedHeight").textContent = savedHeight || "Ikke sat";
+        document.getElementById("savedWidth").textContent = savedWidth || "Ikke sat";
+
+    </script>
+
+
 </div>
 
 
