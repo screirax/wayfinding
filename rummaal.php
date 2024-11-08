@@ -42,7 +42,7 @@ require "settings/init.php";
         </div>
         <div class="input-group mb-3 w-50 mt-4">
             <span class="input-group-text" id="basic-addon1">Højde</span>
-            <input type="text" class="form-control" placeholder="Centimeter" aria-label="height" aria-describedby="basic-addon1">
+            <input type="text" class="form-control" id="test" placeholder="Centimeter" aria-label="height" aria-describedby="basic-addon1">
         </div>
         <div class="input-group mb-3 w-50 mt-4">
             <span class="input-group-text" id="basic-addon1">Bredde</span>
@@ -55,6 +55,23 @@ require "settings/init.php";
     </div>
 
 </div>
+
+<script>
+
+    const inputField = document.querySelector("#test");
+
+    // Add an event listener for the 'input' event
+    inputField.addEventListener("input", () => {
+        // Log the value to the console whenever it changes
+        console.log(inputField.value);
+    });
+
+    const myDiv = document.querySelector("test");
+    myDiv.style.color = "red";
+
+
+
+</script>
 
 
 </body>
