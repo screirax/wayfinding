@@ -33,22 +33,76 @@ require "settings/init.php";
 
 
     </div>
-
+<!--
     <div class="mt-5 col-12 col-md-8">
-        <div class="mb-3" id="divtest" style="height: 100px; width: 100px; border: 2px solid black; background-color: #F0E5DD">
+        <div class="mb-3" id="divrum" style="border: 2px solid black; background-color: #F0E5DD">
             <p class="text-center mt-3">Din Væg</p>
+
+            <h2>Gemte mål</h2>
+            <p>Højde: <span id="savedHeight"></span> cm</p>
+            <p>Bredde: <span id="savedWidth"></span> cm</p>
+
         </div>
     </div>
 
 
 
     <script>
+
         const savedHeight = sessionStorage.getItem("height");
         const savedWidth = sessionStorage.getItem("width");
 
-        document.getElementById("savedHeight").textContent = savedHeight || "Ikke sat";
-        document.getElementById("savedWidth").textContent = savedWidth || "Ikke sat";
 
+        const divrum = document.getElementById("divrum");
+        const savedHeightSpan = document.getElementById("savedHeight");
+        const savedWidthSpan = document.getElementById("savedWidth");
+
+        // Check om der er gemte værdier i sessionStorage
+        if (savedHeight && savedWidth) {
+            // Opdater div-størrelsen
+            divrum.style.height = savedHeight + "px";
+            divrum.style.width = savedWidth + "px";
+
+            // Opdater tekstindholdet i span-elementerne
+            savedHeightSpan.textContent = savedHeight || "Ikke sat";
+            savedWidthSpan.textContent = savedWidth || "Ikke sat";
+
+        else
+        {
+            divrum.innerHTML = "<p style='color: red;'>Der er sket en fejl. Gå venligst tilbage til sidste side og prøv igen.</p>";
+        }
+    </script>
+-->
+    <div class="mt-5 col-12 col-md-8">
+        <div class="mb-3" id="divrum" style="border: 2px solid black; background-color: #F0E5DD">
+            <p class="text-center mt-3">Din Væg</p>
+
+
+        </div>
+    </div>
+
+    <script>
+        const savedHeight = sessionStorage.getItem("height");
+        const savedWidth = sessionStorage.getItem("width");
+
+        // Find div'en og span-elementerne, som skal opdateres
+        const divrum = document.getElementById("divrum");
+        const savedHeightSpan = document.getElementById("savedHeight");
+        const savedWidthSpan = document.getElementById("savedWidth");
+
+        // Check om der er gemte værdier i sessionStorage
+        if (savedHeight && savedWidth) {
+            // Opdater div-størrelsen
+            divrum.style.height = savedHeight + "px";
+            divrum.style.width = savedWidth + "px";
+
+            // Opdater tekstindholdet i span-elementerne
+            savedHeightSpan.textContent = savedHeight || "Ikke sat";
+            savedWidthSpan.textContent = savedWidth || "Ikke sat";
+        } else {
+            // Hvis ingen data er gemt, vis en fejlmeddelelse på siden
+            divrum.innerHTML = "<p style='color: red;'>Der er sket en fejl. Gå venligst tilbage til sidste side og prøv igen.</p>";
+        }
     </script>
 
 
