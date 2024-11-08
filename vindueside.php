@@ -27,7 +27,7 @@ require "settings/init.php";
 </div>
 <div class="container col-12 col-md-12 d-flex flex-column flex-md-row justify-content-between mt-1 bg-body-tertiary">
 
-    <p>dette er en test for at se om den kommer på github</p>
+    <p>dette er en test for at se om den kommer på github2</p>
 </div>
 
 
