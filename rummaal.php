@@ -29,7 +29,17 @@ require "settings/init.php";
 
     <div class="col-12 col-md-6 mt-5">
         <h2 class="text-left">Vælg en væg og skriv dine mål</h2>
-        
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle mt-4 p-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Vælg Væg
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Nord Væg</a></li>
+                <li><a class="dropdown-item" href="#">Syd Væg</a></li>
+                <li><a class="dropdown-item" href="#">Øst Væg</a></li>
+                <li><a class="dropdown-item" href="#">Vest Væg</a></li>
+            </ul>
+        </div>
         <div class="input-group mb-3 w-50 mt-4">
             <span class="input-group-text" id="basic-addon1">Højde</span>
             <input type="text" class="form-control" placeholder="Centimeter" aria-label="height" aria-describedby="basic-addon1">
@@ -41,7 +51,7 @@ require "settings/init.php";
     </div>
 
     <div class="mt-5 col-12 col-md-6">
-        <img class="img-fluid" src="pictures/aabning-nr40.webp">
+        <img class="img-fluid" src="pictures/aabning-nr40.webp" alt="placeholder">
     </div>
 
 </div>
